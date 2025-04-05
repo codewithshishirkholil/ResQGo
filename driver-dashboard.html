@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Dashboard - ResQGo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header dashboard-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="driver-dashboard.html" class="logo">
+                    <img src="images/ambulance-icon.svg" alt="Ambulance Icon" class="logo-icon">
+                    <h1>ResQGo Driver</h1>
+                </a>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="driver-dashboard.html" class="active">Dashboard</a></li>
+                        <li><a href="driver-trips.html">My Trips</a></li>
+                        <li><a href="driver-earnings.html">Earnings</a></li>
+                        <li><a href="driver-help.html">Help</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="user-menu">
+                    <a href="#" class="notification-icon">
+                        <img src="images/bell-icon.svg" alt="Notifications">
+                    </a>
+                    <div class="user-dropdown">
+                        <button class="user-dropdown-toggle">
+                            <div class="user-avatar">
+                                <img src="images/user-avatar.svg" alt="User">
+                            </div>
+                        </button>
+                        <div class="user-dropdown-menu">
+                            <a href="driver-profile.html">Profile</a>
+                            <a href="driver-settings.html">Settings</a>
+                            <a href="driver-vehicle.html">Vehicle Details</a>
+                            <a href="login.html">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="mobile-menu-toggle">
+                    <img src="images/menu-icon.svg" alt="Menu">
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <ul class="mobile-nav-list">
+                    <li><a href="driver-dashboard.html">Dashboard</a></li>
+                    <li><a href="driver-trips.html">My Trips</a></li>
+                    <li><a href="driver-earnings.html">Earnings</a></li>
+                    <li><a href="driver-help.html">Help</a></li>
+                    <li><a href="driver-profile.html">Profile</a></li>
+                    <li><a href="driver-settings.html">Settings</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="dashboard-content">
+        <div class="container">
+            <div class="dashboard-grid">
+                <!-- Left Sidebar -->
+                <div class="dashboard-sidebar">
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <h3>Driver Profile</h3>
+                        </div>
+                        <div class="profile-content">
+                            <div class="profile-info">
+                                <div class="profile-avatar">
+                                    <img src="images/user-avatar.svg" alt="User">
+                                </div>
+                                <h4>Ahmed Khan</h4>
+                                <p>+880 1812 345678</p>
+                                <div class="driver-rating">
+                                    <img src="images/star-icon.svg" alt="Star" class="rating-icon">
+                                    <span>4.8</span>
+                                    <span class="trip-count">(124 trips)</span>
+                                </div>
+                            </div>
+                            
+                            <div class="availability-status">
+                                <div>
+                                    <p class="status-label">Availability Status</p>
+                                    <p class="status-text">You are available for trips</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked id="availabilityToggle">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            
+                            <div class="profile-details">
+                                <div class="detail-group">
+                                    <h5>Vehicle Information</h5>
+                                    <p>Basic Ambulance</p>
+                                    <p>Reg: DHA-12-3456</p>
+                                </div>
+                                
+                                <div class="detail-group">
+                                    <h5>Today's Stats</h5>
+                                    <div class="stats-grid">
+                                        <div class="stat-box">
+                                            <p class="stat-label">Trips</p>
+                                            <p class="stat-value">3</p>
+                                        </div>
+                                        <div class="stat-box">
+                                            <p class="stat-label">Earnings</p>
+                                            <p class="stat-value">Tk 3,500</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-footer">
+                            <a href="driver-profile-edit.html" class="btn btn-outline btn-block">Edit Profile</a>
+                        </div>
+                    </div>
+                    
+                    <div class="earnings-card">
+                        <div class="card-header">
+                            <h3>Recent Earnings</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="earnings-item">
+                                <div class="earnings-header">
+                                    <span class="period">Today</span>
+                                    <span class="amount">Tk 3,500</span>
+                                </div>
+                                <p class="trips-count">3 trips completed</p>
+                            </div>
+                            
+                            <div class="earnings-item">
+                                <div class="earnings-header">
+                                    <span class="period">Yesterday</span>
+                                    <span class="amount">Tk 4,200</span>
+                                </div>
+                                <p class="trips-count">4 trips completed</p>
+                            </div>
+                            
+                            <div class="earnings-item">
+                                <div class="earnings-header">
+                                    <span class="period">This Week</span>
+                                    <span class="amount">Tk 18,500</span>
+                                </div>
+                                <p class="trips-count">15 trips completed</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="action-buttons">
+                                <a href="driver-earnings.html" class="btn btn-outline btn-sm">
+                                    <img src="images/dollar-icon.svg" alt="Dollar" class="btn-icon">
+                                    <span>Earnings</span>
+                                </a>
+                                <a href="driver-trips.html" class="btn btn-outline btn-sm">
+                                    <img src="images/calendar-icon.svg" alt="Calendar" class="btn-icon">
+                                    <span>History</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Dashboard Area -->
+                <div class="dashboard-main">
+                    <div class="request-card">
+                        <div class="card-header">
+                            <h3>Available Ride Requests</h3>
+                            <p>Select a request to propose your fare</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="ride-requests" id="rideRequests">
+                                <div class="request-item" data-request-id="1">
+                                    <div class="request-header">
+                                        <div class="customer-info">
+                                            <div class="customer-avatar">
+                                                <img src="images/user-avatar.svg" alt="User">
+                                            </div>
+                                            <span class="customer-name">Farhan Ahmed</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="request-details">
+                                        <div class="location-detail">
+                                            <p class="detail-label">Pickup</p>
+                                            <p class="location">
+                                                <img src="images/location-icon.svg" alt="Location" class="detail-icon">
+                                                Gulshan-2, Dhaka
+                                            </p>
+                                        </div>
+                                        <div class="location-detail">
+                                            <p class="detail-label">Destination</p>
+                                            <p class="location">
+                                                <img src="images/location-icon.svg" alt="Location" class="detail-icon">
+                                                United Hospital, Gulshan
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="request-footer">
+                                        <span class="distance">Distance: 3.2 km</span>
+                                        <span class="request-time">2 mins ago</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="request-item emergency-request" data-request-id="2">
+                                    <div class="request-header">
+                                        <div class="customer-info">
+                                            <div class="customer-avatar">
+                                                <img src="images/user-avatar.svg" alt="User">
+                                            </div>
+                                            <span class="customer-name">Nusrat Jahan</span>
+                                        </div>
+                                        <span class="emergency-badge">Emergency</span>
+                                    </div>
+                                    
+                                    <div class="request-details">
+                                        <div class="location-detail">
+                                            <p class="detail-label">Pickup</p>
+                                            <p class="location">
+                                                <img src="images/location-icon.svg" alt="Location" class="detail-icon">
+                                                Banani, Dhaka
+                                            </p>
+                                        </div>
+                                        <div class="location-detail">
+                                            <p class="detail-label">Destination</p>
+                                            <p class="location">
+                                                <img src="images/location-icon.svg" alt="Location" class="detail-icon">
+                                                Square Hospital, Panthapath
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="request-footer">
+                                        <span class="distance">Distance: 7.5 km</span>
+                                        <span class="request-time">Just now</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="request-item" data-request-id="3">
+                                    <div class="request-header">
+                                        <div class="customer-info">
+                                            <div class="customer-avatar">
+                                                <img src="images/user-avatar.svg" alt="User">
+                                            </div>
+                                            <span class="customer-name">Kamal Hossain</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="request-details">
+                                        <div class="location-detail">
+                                            <p class="detail-label">Pickup</p>
+                                            <p class="location">
+                                                <img src="images/location-icon.svg" alt="Location" class="detail-icon">
+                                                Uttara, Dhaka
+                                            </p>
+                                        </div>
+                                        <div class="location-detail">
+                                            <p class="detail-label">Destination</p>
+                                            <p class="location">
+                                                <img src="images/location-icon.svg" alt="Location" class="detail-icon">
+                                                Dhaka Medical College Hospital
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="request-footer">
+                                        <span class="distance">Distance: 12.1 km</span>
+                                        <span class="request-time">5 mins ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fare-proposal hidden" id="fareProposal">
+                                <h4>Propose Your Fare</h4>
+                                <div class="fare-input-group">
+                                    <div class="input-with-prefix">
+                                        <span class="input-prefix">Tk</span>
+                                        <input type="number" id="fareAmount" placeholder="Enter fare amount">
+                                    </div>
+                                    <button class="btn btn-primary" id="proposeFareBtn">Propose Fare</button>
+                                </div>
+                                <p class="fare-suggestion">Suggested fare range: Tk 1,000 - 1,500 based on distance and time</p>
+                            </div>
+                            
+                            <!-- Waiting for Customer (Initially Hidden) -->
+                            <div class="waiting-for-customer hidden" id="waitingForCustomer">
+                                <div class="waiting-message">
+                                    <div class="waiting-icon">
+                                        <img src="images/clock-icon.svg" alt="Clock">
+                                    </div>
+                                    <h3>Waiting for Customer</h3>
+                                    <p>Your fare proposal has been sent</p>
+                                </div>
+                                
+                                <div class="request-details-card">
+                                    <h4>Request Details</h4>
+                                    <div class="details-grid">
+                                        <div class="detail-item">
+                                            <p class="detail-label">Customer</p>
+                                            <p class="detail-value" id="customerName">Farhan Ahmed</p>
+                                        </div>
+                                        <div class="detail-item">
+                                            <p class="detail-label">Distance</p>
+                                            <p class="detail-value" id="requestDistance">3.2 km</p>
+                                        </div>
+                                        <div class="detail-item">
+                                            <p class="detail-label">Pickup</p>
+                                            <p class="detail-value" id="requestPickup">Gulshan-2, Dhaka</p>
+                                        </div>
+                                        <div class="detail-item">
+                                            <p class="detail-label">Destination</p>
+                                            <p class="detail-value" id="requestDestination">United Hospital, Gulshan</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="proposed-fare">
+                                        <p class="detail-label">Your Proposed Fare</p>
+                                        <p class="fare-amount" id="proposedFareAmount">Tk 1,200</p>
+                                    </div>
+                                    
+                                    <!-- For demo purposes, simulate customer acceptance -->
+                                    <button class="btn btn-primary btn-block" id="simulateAcceptBtn">
+                                        Simulate Customer Acceptance
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Trip Confirmed (Initially Hidden) -->
+                            <div class="trip-confirmed hidden" id="tripConfirmed">
+                                <div class="confirmation-message">
+                                    <div class="confirmation-icon">
+                                        <img src="images/ambulance-icon.svg" alt="Ambulance">
+                                    </div>
+                                    <h3>Trip Confirmed!</h3>
+                                    <p>Customer has accepted your fare</p>
+                                </div>
+                                
+                                <div class="trip-details-card">
+                                    <h4>Trip Details</h4>
+                                    <div class="customer-profile">
+                                        <div class="customer-avatar">
+                                            <img src="images/user-avatar.svg" alt="Customer">
+                                        </div>
+                                        <div class="customer-info">
+                                            <p class="customer-name" id="confirmedCustomerName">Farhan Ahmed</p>
+                                        </div>
+                                        <a href="tel:+8801712345678" class="btn btn-outline btn-sm">
+                                            <img src="images/phone-icon.svg" alt="Phone" class="btn-icon">
+                                            Call
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="trip-details-grid">
+                                        <div class="trip-detail">
+                                            <p class="detail-label">Pickup</p>
+                                            <p class="detail-value" id="confirmedPickup">Gulshan-2, Dhaka</p>
+                                        </div>
+                                        <div class="trip-detail">
+                                            <p class="detail-label">Destination</p>
+                                            <p class="detail-value" id="confirmedDestination">United Hospital, Gulshan</p>
+                                        </div>
+                                        <div class="trip-detail">
+                                            <p class="detail-label">Distance</p>
+                                            <p class="detail-value" id="confirmedDistance">3.2 km</p>
+                                        </div>
+                                        <div class="trip-detail">
+                                            <p class="detail-label">Fare</p>
+                                            <p class="detail-value" id="confirmedFare">Tk 1,200</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="trip-actions">
+                                        <button class="btn btn-success btn-block">Navigate to Pickup</button>
+                                        <button class="btn btn-outline btn-block" id="completeTripBtn">Complete Trip</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="action-cards">
+                        <div class="summary-card">
+                            <div class="card-header">
+                                <h3>Today's Summary</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="summary-grid">
+                                    <div class="summary-item blue">
+                                        <p class="summary-label">Trips</p>
+                                        <p class="summary-value">3</p>
+                                    </div>
+                                    <div class="summary-item green">
+                                        <p class="summary-label">Earnings</p>
+                                        <p class="summary-value">Tk 3,500</p>
+                                    </div>
+                                    <div class="summary-item yellow">
+                                        <p class="summary-label">Hours Online</p>
+                                        <p class="summary-value">5.2</p>
+                                    </div>
+                                    <div class="summary-item purple">
+                                        <p class="summary-label">Avg. Rating</p>
+                                        <p class="summary-value">4.9</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-actions-card">
+                            <div class="card-header">
+                                <h3>Quick Actions</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="quick-actions-grid">
+                                    <a href="driver-earnings-withdraw.html" class="quick-action-btn">
+                                        <img src="images/dollar-icon.svg" alt="Dollar" class="action-icon">
+                                        <span>Withdraw Earnings</span>
+                                    </a>
+                                    <a href="driver-trips.html" class="quick-action-btn">
+                                        <img src="images/clock-icon.svg" alt="Clock" class="action-icon">
+                                        <span>Trip History</span>
+                                    </a>
+                                    <a href="driver-home-area.html" class="quick-action-btn">
+                                        <img src="images/location-icon.svg" alt="Location" class="action-icon">
+                                        <span>Set Home Area</span>
+                                    </a>
+                                    <a href="driver-ratings.html" class="quick-action-btn">
+                                        <img src="images/star-icon.svg" alt="Star" class="action-icon">
+                                        <span>View Ratings</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('active');
+                });
+            }
+            
+            // User dropdown toggle
+            const userDropdownToggle = document.querySelector('.user-dropdown-toggle');
+            const userDropdownMenu = document.querySelector('.user-dropdown-menu');
+            
+            if (userDropdownToggle && userDropdownMenu) {
+                userDropdownToggle.addEventListener('click', function() {
+                    userDropdownMenu.classList.toggle('active');
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('.user-dropdown')) {
+                        userDropdownMenu.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Availability toggle
+            const availabilityToggle = document.getElementById('availabilityToggle');
+            const statusText = document.querySelector('.status-text');
+            
+            if (availabilityToggle && statusText) {
+                availabilityToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        statusText.textContent = 'You are available for trips';
+                    } else {
+                        statusText.textContent = 'You are offline';
+                    }
+                });
+            }
+            
+            // Request item selection
+            const requestItems = document.querySelectorAll('.request-item');
+            const rideRequests = document.getElementById('rideRequests');
+            const fareProposal = document.getElementById('fareProposal');
+            
+            if (requestItems.length && rideRequests && fareProposal) {
+                requestItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        // Remove selected class from all items
+                        requestItems.forEach(i => i.classList.remove('selected'));
+                        
+                        // Add selected class to clicked item
+                        this.classList.add('selected');
+                        
+                        // Show fare proposal section
+                        fareProposal.classList.remove('hidden');
+                    });
+                });
+            }
+            
+            // Propose fare button
+            const proposeFareBtn = document.getElementById('proposeFareBtn');
+            const fareAmount = document.getElementById('fareAmount');
+            const waitingForCustomer = document.getElementById('waitingForCustomer');
+            const proposedFareAmount = document.getElementById('proposedFareAmount');
+            
+            if (proposeFareBtn && fareAmount && waitingForCustomer && proposedFareAmount) {
+                proposeFareBtn.addEventListener('click', function() {
+                    if (fareAmount.value) {
+                        // Hide ride requests and fare proposal
+                        rideRequests.classList.add('hidden');
+                        fareProposal.classList.add('hidden');
+                        
+                        // Show waiting for customer
+                        waitingForCustomer.classList.remove('hidden');
+                        
+                        // Set proposed fare amount
+                        proposedFareAmount.textContent = `Tk ${fareAmount.value}`;
+                    }
+                });
+            }
+            
+            // Simulate customer acceptance
+            const simulateAcceptBtn = document.getElementById('simulateAcceptBtn');
+            const tripConfirmed = document.getElementById('tripConfirmed');
+            const confirmedFare = document.getElementById('confirmedFare');
+            
+            if (simulateAcceptBtn && tripConfirmed && confirmedFare) {
+                simulateAcceptBtn.addEventListener('click', function() {
+                    // Hide waiting for customer
+                    waitingForCustomer.classList.add('hidden');
+                    
+                    // Show trip confirmed
+                    tripConfirmed.classList.remove('hidden');
+                    
+                    // Set confirmed fare
+                    confirmedFare.textContent = proposedFareAmount.textContent;
+                });
+            }
+            
+            // Complete trip button
+            const completeTripBtn = document.getElementById('completeTripBtn');
+            
+            if (completeTripBtn) {
+                completeTripBtn.addEventListener('click', function() {
+                    // Reset everything
+                    tripConfirmed.classList.add('hidden');
+                    rideRequests.classList.remove('hidden');
+                    
+                    // Clear selected class from all request items
+                    requestItems.forEach(item => item.classList.remove('selected'));
+                    
+                    // Clear fare amount input
+                    fareAmount.value = '';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

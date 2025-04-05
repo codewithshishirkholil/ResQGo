@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - ResQGo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="images/ambulance-icon.svg" alt="Ambulance Icon" class="logo-icon">
+                    <h1>ResQGo</h1>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h2>Create an Account</h2>
+                    <p>Register to use our ambulance service platform</p>
+                </div>
+                
+                <div class="auth-tabs">
+                    <div class="tab-header">
+                        <button class="tab-button active" data-tab="user-tab">
+                            <img src="images/user-icon.svg" alt="User Icon" class="tab-icon">
+                            User
+                        </button>
+                        <button class="tab-button" data-tab="driver-tab">
+                            <img src="images/ambulance-icon.svg" alt="Ambulance Icon" class="tab-icon">
+                            Driver
+                        </button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <!-- User Registration Form -->
+                        <div class="tab-pane active" id="user-tab">
+                            <form action="user-dashboard.html" method="get" class="auth-form">
+                                <div class="form-group">
+                                    <label for="user-name">Full Name</label>
+                                    <input type="text" id="user-name" placeholder="John Doe" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="user-phone">Phone Number</label>
+                                    <input type="tel" id="user-phone" placeholder="+880 1234 567890" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="user-email">Email</label>
+                                    <input type="email" id="user-email" placeholder="john@example.com" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="user-password">Password</label>
+                                    <input type="password" id="user-password" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="user-emergency-contact">Emergency Contact Number</label>
+                                    <input type="tel" id="user-emergency-contact" placeholder="+880 9876 543210">
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-block">Register as User</button>
+                            </form>
+                        </div>
+                        
+                        <!-- Driver Registration Form -->
+                        <div class="tab-pane" id="driver-tab">
+                            <form action="driver-dashboard.html" method="get" class="auth-form">
+                                <div class="form-group">
+                                    <label for="driver-name">Full Name</label>
+                                    <input type="text" id="driver-name" placeholder="John Doe" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="driver-phone">Phone Number</label>
+                                    <input type="tel" id="driver-phone" placeholder="+880 1234 567890" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="driver-email">Email</label>
+                                    <input type="email" id="driver-email" placeholder="john@example.com" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="driver-password">Password</label>
+                                    <input type="password" id="driver-password" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="vehicle-number">Vehicle Registration Number</label>
+                                    <input type="text" id="vehicle-number" placeholder="DHA-12-3456" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="vehicle-type">Vehicle Type</label>
+                                    <input type="text" id="vehicle-type" placeholder="Basic/ICU/Freezer" required>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-block">Register as Driver</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="login.html">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Simple tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons and panes
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Show corresponding tab pane
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
