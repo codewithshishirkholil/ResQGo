@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - ResQGo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header dashboard-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="user-dashboard.html" class="logo">
+                    <img src="images/ambulance-icon.svg" alt="Ambulance Icon" class="logo-icon">
+                    <h1>ResQGo</h1>
+                </a>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="user-dashboard.html">Dashboard</a></li>
+                        <li><a href="trips.html">My Trips</a></li>
+                        <li><a href="user-messages.html">Messages</a></li>
+                        <li><a href="emergency-contacts.html">Emergency Contacts</a></li>
+                        <li><a href="help.html">Help</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="user-menu">
+                    <a href="#" class="notification-icon">
+                        <img src="images/bell-icon.svg" alt="Notifications">
+                    </a>
+                    <div class="user-dropdown">
+                        <button class="user-dropdown-toggle">
+                            <div class="user-avatar">
+                                <img src="images/user-avatar.svg" alt="User">
+                            </div>
+                        </button>
+                        <div class="user-dropdown-menu">
+                            <a href="profile.html" class="active">Profile</a>
+                            <a href="settings.html">Settings</a>
+                            <a href="payment-methods.html">Payment Methods</a>
+                            <a href="login.html">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="mobile-menu-toggle">
+                    <img src="images/menu-icon.svg" alt="Menu">
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <ul class="mobile-nav-list">
+                    <li><a href="user-dashboard.html">Dashboard</a></li>
+                    <li><a href="trips.html">My Trips</a></li>
+                    <li><a href="user-messages.html">Messages</a></li>
+                    <li><a href="emergency-contacts.html">Emergency Contacts</a></li>
+                    <li><a href="help.html">Help</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="dashboard-content">
+        <div class="container">
+            <div class="profile-container">
+                <div class="profile-header">
+                    <h2>My Profile</h2>
+                    <p>Manage your personal information</p>
+                </div>
+                
+                <div class="profile-content">
+                    <div class="profile-sidebar">
+                        <div class="profile-avatar-container">
+                            <div class="profile-avatar">
+                                <img src="images/user-avatar.svg" alt="User">
+                            </div>
+                            <button class="change-avatar-btn">Change Photo</button>
+                        </div>
+                        
+                        <div class="profile-menu">
+                            <a href="profile.html" class="profile-menu-item active">
+                                <img src="images/user-icon.svg" alt="Profile">
+                                <span>Personal Info</span>
+                            </a>
+                            <a href="emergency-contacts.html" class="profile-menu-item">
+                                <img src="images/phone-icon.svg" alt="Emergency Contacts">
+                                <span>Emergency Contacts</span>
+                            </a>
+                            <a href="payment-methods.html" class="profile-menu-item">
+                                <img src="images/credit-card-icon.svg" alt="Payment Methods">
+                                <span>Payment Methods</span>
+                            </a>
+                            <a href="settings.html" class="profile-menu-item">
+                                <img src="images/settings-icon.svg" alt="Settings">
+                                <span>Account Settings</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-details">
+                        <form class="profile-form">
+                            <div class="form-section">
+                                <h3>Personal Information</h3>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name</label>
+                                        <input type="text" id="firstName" value="Farhan" class="form-control">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" id="lastName" value="Ahmed" class="form-control">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" id="email" value="farhan.ahmed@example.com" class="form-control">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" id="phone" value="+880 1712 345678" class="form-control">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="address">Home Address</label>
+                                    <input type="text" id="address" value="House 42, Road 3, Block A, Banani" class="form-control">
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        <input type="text" id="city" value="Dhaka" class="form-control">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="postalCode">Postal Code</label>
+                                        <input type="text" id="postalCode" value="1213" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h3>Medical Information</h3>
+                                <p class="form-section-desc">This information will be shared with ambulance drivers in case of emergency</p>
+                                
+                                <div class="form-group">
+                                    <label for="bloodGroup">Blood Group</label>
+                                    <select id="bloodGroup" class="form-control">
+                                        <option value="">Select Blood Group</option>
+                                        <option value="A+" selected>A+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="AB-">AB-</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="allergies">Allergies</label>
+                                    <input type="text" id="allergies" value="Penicillin" class="form-control">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="medicalConditions">Medical Conditions</label>
+                                    <textarea id="medicalConditions" class="form-control" rows="3">Diabetes Type 2, Hypertension</textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="medications">Current Medications</label>
+                                    <textarea id="medications" class="form-control" rows="3">Metformin 500mg twice daily, Lisinopril 10mg once daily</textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                                <button type="button" class="btn btn-secondary">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('active');
+                });
+            }
+            
+            // User dropdown toggle
+            const userDropdownToggle = document.querySelector('.user-dropdown-toggle');
+            const userDropdownMenu = document.querySelector('.user-dropdown-menu');
+            
+            if (userDropdownToggle && userDropdownMenu) {
+                userDropdownToggle.addEventListener('click', function() {
+                    userDropdownMenu.classList.toggle('active');
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('.user-dropdown')) {
+                        userDropdownMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - ResQGo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header dashboard-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="user-dashboard.html" class="logo">
+                    <img src="images/ambulance-icon.svg" alt="Ambulance Icon" class="logo-icon">
+                    <h1>ResQGo</h1>
+                </a>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="user-dashboard.html">Dashboard</a></li>
+                        <li><a href="trips.html">My Trips</a></li>
+                        <li><a href="user-messages.html">Messages</a></li>
+                        <li><a href="emergency-contacts.html">Emergency Contacts</a></li>
+                        <li><a href="help.html">Help</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="user-menu">
+                    <a href="#" class="notification-icon">
+                        <img src="images/bell-icon.svg" alt="Notifications">
+                    </a>
+                    <div class="user-dropdown">
+                        <button class="user-dropdown-toggle">
+                            <div class="user-avatar">
+                                <img src="images/user-avatar.svg" alt="User">
+                            </div>
+                        </button>
+                        <div class="user-dropdown-menu">
+                            <a href="profile.html" class="active">Profile</a>
+                            <a href="settings.html">Settings</a>
+                            <a href="payment-methods.html">Payment Methods</a>
+                            <a href="login.html">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="mobile-menu-toggle">
+                    <img src="images/menu-icon.svg" alt="Menu">
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <ul class="mobile-nav-list">
+                    <li><a href="user-dashboard.html">Dashboard</a></li>
+                    <li><a href="trips.html">My Trips</a></li>
+                    <li><a href="user-messages.html">Messages</a></li>
+                    <li><a href="emergency-contacts.html">Emergency Contacts</a></li>
+                    <li><a href="help.html">Help</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="dashboard-content">
+        <div class="container">
+            <div class="profile-container">
+                <div class="profile-header">
+                    <h2>My Profile</h2>
+                    <p>Manage your personal information</p>
+                </div>
+                
+                <div class="profile-content">
+                    <div class="profile-sidebar">
+                        <div class="profile-avatar-container">
+                            <div class="profile-avatar">
+                                <img src="images/user-avatar.svg" alt="User">
+                            </div>
+                            <button class="change-avatar-btn">Change Photo</button>
+                        </div>
+                        
+                        <div class="profile-menu">
+                            <a href="profile.html" class="profile-menu-item active">
+                                <img src="images/user-icon.svg" alt="Profile">
+                                <span>Personal Info</span>
+                            </a>
+                            <a href="emergency-contacts.html" class="profile-menu-item">
+                                <img src="images/phone-icon.svg" alt="Emergency Contacts">
+                                <span>Emergency Contacts</span>
+                            </a>
+                            <a href="payment-methods.html" class="profile-menu-item">
+                                <img src="images/credit-card-icon.svg" alt="Payment Methods">
+                                <span>Payment Methods</span>
+                            </a>
+                            <a href="settings.html" class="profile-menu-item">
+                                <img src="images/settings-icon.svg" alt="Settings">
+                                <span>Account Settings</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-details">
+                        <form class="profile-form">
+                            <div class="form-section">
+                                <h3>Personal Information</h3>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name</label>
+                                        <input type="text" id="firstName" value="Farhan" class="form-control">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" id="lastName" value="Ahmed" class="form-control">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" id="email" value="farhan.ahmed@example.com" class="form-control">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" id="phone" value="+880 1712 345678" class="form-control">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="address">Home Address</label>
+                                    <input type="text" id="address" value="House 42, Road 3, Block A, Banani" class="form-control">
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        <input type="text" id="city" value="Dhaka" class="form-control">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="postalCode">Postal Code</label>
+                                        <input type="text" id="postalCode" value="1213" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h3>Medical Information</h3>
+                                <p class="form-section-desc">This information will be shared with ambulance drivers in case of emergency</p>
+                                
+                                <div class="form-group">
+                                    <label for="bloodGroup">Blood Group</label>
+                                    <select id="bloodGroup" class="form-control">
+                                        <option value="">Select Blood Group</option>
+                                        <option value="A+" selected>A+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="AB-">AB-</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="allergies">Allergies</label>
+                                    <input type="text" id="allergies" value="Penicillin" class="form-control">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="medicalConditions">Medical Conditions</label>
+                                    <textarea id="medicalConditions" class="form-control" rows="3">Diabetes Type 2, Hypertension</textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="medications">Current Medications</label>
+                                    <textarea id="medications" class="form-control" rows="3">Metformin 500mg twice daily, Lisinopril 10mg once daily</textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                                <button type="button" class="btn btn-secondary">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('active');
+                });
+            }
+            
+            // User dropdown toggle
+            const userDropdownToggle = document.querySelector('.user-dropdown-toggle');
+            const userDropdownMenu = document.querySelector('.user-dropdown-menu');
+            
+            if (userDropdownToggle && userDropdownMenu) {
+                userDropdownToggle.addEventListener('click', function() {
+                    userDropdownMenu.classList.toggle('active');
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('.user-dropdown')) {
+                        userDropdownMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

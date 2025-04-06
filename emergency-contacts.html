@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Trips - ResQGo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header dashboard-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="user-dashboard.html" class="logo">
+                    <img src="images/ambulance-icon.svg" alt="Ambulance Icon" class="logo-icon">
+                    <h1>ResQGo</h1>
+                </a>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="user-dashboard.html">Dashboard</a></li>
+                        <li><a href="trips.html" class="active">My Trips</a></li>
+                        <li><a href="user-messages.html">Messages</a></li>
+                        <li><a href="emergency-contacts.html">Emergency Contacts</a></li>
+                        <li><a href="help.html">Help</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="user-menu">
+                    <a href="#" class="notification-icon">
+                        <img src="images/bell-icon.svg" alt="Notifications">
+                    </a>
+                    <div class="user-dropdown">
+                        <button class="user-dropdown-toggle">
+                            <div class="user-avatar">
+                                <img src="images/user-avatar.svg" alt="User">
+                            </div>
+                        </button>
+                        <div class="user-dropdown-menu">
+                            <a href="profile.html">Profile</a>
+                            <a href="settings.html">Settings</a>
+                            <a href="payment-methods.html">Payment Methods</a>
+                            <a href="login.html">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="mobile-menu-toggle">
+                    <img src="images/menu-icon.svg" alt="Menu">
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <ul class="mobile-nav-list">
+                    <li><a href="user-dashboard.html">Dashboard</a></li>
+                    <li><a href="trips.html">My Trips</a></li>
+                    <li><a href="user-messages.html">Messages</a></li>
+                    <li><a href="emergency-contacts.html">Emergency Contacts</a></li>
+                    <li><a href="help.html">Help</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="dashboard-content">
+        <div class="container">
+            <div class="trips-container">
+                <div class="page-header">
+                    <h2>My Trips</h2>
+                    <div class="trips-filter">
+                        <div class="search-box">
+                            <input type="text" placeholder="Search trips...">
+                            <button class="search-btn">
+                                <img src="images/search-icon.svg" alt="Search">
+                            </button>
+                        </div>
+                        
+                        <div class="filter-dropdown">
+                            <button class="filter-btn">
+                                <img src="images/filter-icon.svg" alt="Filter">
+                                <span>Filter</span>
+                            </button>
+                            <div class="filter-menu">
+                                <div class="filter-group">
+                                    <h4>Trip Status</h4>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        All
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        Completed
+                                    </label>
+                               

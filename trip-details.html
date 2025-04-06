@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Details - ResQGo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header dashboard-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="user-dashboard.html" class="logo">
+                    <img src="images/ambulance-icon.svg" alt="Ambulance Icon" class="logo-icon">
+                    <h1>ResQGo</h1>
+                </a>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="user-dashboard.html">Dashboard</a></li>
+                        <li><a href="trips.html" class="active">My Trips</a></li>
+                        <li><a href="user-messages.html">Messages</a></li>
+                        <li><a href="emergency-contacts.html">Emergency Contacts</a></li>
+                        <li><a href="help.html">Help</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="user-menu">
+                    <a href="#" class="notification-icon">
+                        <img src="images/bell-icon.svg" alt="Notifications">
+                    </a>
+                    <div class="user-dropdown">
+                        <button class="user-dropdown-toggle">
+                            <div class="user-avatar">
+                                <img src="images/user-avatar.svg" alt="User">
+                            </div>
+                        </button>
+                        <div class="user-dropdown-menu">
+                            <a href="profile.html">Profile</a>
+                            <a href="settings.html">Settings</a>
+                            <a href="payment-methods.html">Payment Methods</a>
+                            <a href="login.html">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="mobile-menu-toggle">
+                    <img src="images/menu-icon.svg" alt="Menu">
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <ul class="mobile-nav-list">
+                    <li><a href="user-dashboard.html">Dashboard</a></li>
+                    <li><a href="trips.html">My Trips</a></li>
+                    <li><a href="user-messages.html">Messages</a></li>
+                    <li><a href="emergency-contacts.html">Emergency Contacts</a></li>
+                    <li><a href="help.html">Help</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="dashboard-content">
+        <div class="container">
+            <div class="trip-details-container">
+                <div class="page-header with-back">
+                    <a href="trips.html" class="back-link">
+                        <img src="images/arrow-left-icon.svg" alt="Back">
+                        <span>Back to Trips</span>
+                    </a>
+                    <h2>Trip Details</h2>
+                </div>
+                
+                <div class="trip-status-card">
+                    <div class="trip-status completed">
+                        <span class="status-indicator"></span>
+                        <span class="status-text">Completed</span>
+                    </div>
+                    <div class="trip-id">
+                        <span>Trip ID:</span>
+                        <span class="id-value">RQ-12345</span>
+                    </div>
+                    <div class="trip-date">
+                        <img src="images/calendar-icon.svg" alt="Date">
+                        <span>May 15, 2023 • 10:30 AM</span>
+                    </div>
+                </div>
+                
+                <div class="trip-details-grid">
+                    <div class="trip-map-card">
+                        <div class="card-header">
+                            <h3>Trip Route</h3>
+                        </div>
+                        <div class="trip-map">
+                            <!-- Map placeholder -->
+                            <div class="map-placeholder">
+                                <div class="map-overlay">
+                                    <p>Map view</p>
+                                </div>
+                            </div>
+                            
+                            <div class="trip-locations">
+                                <div class="location-item">
+                                    <div class="location-icon pickup">
+                                        <span></span>
+                                    </div>
+                                    <div class="location-details">
+                                        <p class="location-label">Pickup Location</p>
+                                        <p class="location-address">House 42, Road 3, Block A, Banani, Dhaka</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="location-item">
+                                    <div class="location-icon dropoff">
+                                        <span></span>
+                                    </div>
+                                    <div class="location-details">
+                                        <p class="location-label">Destination</p>
+                                        <p class="location-address">United Hospital, Gulshan-2, Dhaka</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="trip-info-card">
+                        <div class="card-header">
+                            <h3>Trip Information</h3>
+                        </div>
+                        
+                        <div class="trip-info-content">
+                            <div class="info-group">
+                                <div class="info-item">
+                                    <span class="info-label">Distance</span>
+                                    <span class="info-value">7.2 km</span>
+                                </div>
+                                
+                                <div class="info-item">
+                                    <span class="info-label">Duration</span>
+                                    <span class="info-value">25 minutes</span>
+                                </div>
+                            </div>
+                            
+                            <div class="info-group">
+                                <div class="info-item">
+                                    <span class="info-label">Ambulance Type</span>
+                                    <span class="info-value">Basic Life Support</span>
+                                </div>
+                                
+                                <div class="info-item">
+                                    <span class="info-label">Patient Condition</span>
+                                    <span class="info-value">Stable</span>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item full-width">
+                                <span class="info-label">Special Requirements</span>
+                                <span class="info-value">Wheelchair assistance, Oxygen support</span>
+                            </div>
+                            
+                            <div class="info-item full-width">
+                                <span class="info-label">Additional Notes</span>
+                                <span class="info-value">Patient is elderly and requires gentle handling</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="driver-card">
+                        <div class="card-header">
+                            <h3>Driver Information</h3>
+                        </div>
+                        
+                        <div class="driver-info">
+                            <div class="driver-profile">
+                                <div class="driver-avatar">
+                                    <img src="images/user-avatar.svg" alt="Driver">
+                                </div>
+                                <div class="driver-details">
+                                    <h4>Ahmed Khan</h4>
+                                    <div class="driver-rating">
+                                        <div class="stars">
+                                            <span class="star filled">★</span>
+                                            <span class="star filled">★</span>
+                                            <span class="star filled">★</span>
+                                            <span class="star filled">★</span>
+                                            <span class="star half">★</span>
+                                        </div>
+                                        <span class="rating-value">4.8</span>
+                                    </div>
+                                    <p class="driver-license">License: DL-12345678</p>
+                                </div>
+                            </div>
+                            
+                            <div class="vehicle-info">
+                                <div class="info-item">
+                                    <span class="info-label">Vehicle</span>
+                                    <span class="info-value">Toyota HiAce Ambulance</span>
+                                </div>
+                                
+                                <div class="info-item">
+                                    <span class="info-label">Registration</span>
+                                    <span class="info-value">DHA-12-3456</span>
+                                </div>
+                            </div>
+                            
+                            <div class="driver-actions">
+                                <a href="chat.html?id=1" class="btn btn-outline">
+                                    <img src="images/message-icon.svg" alt="Message">
+                                    Message Driver
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-card">
+                        <div class="card-header">
+                            <h3>Payment Details</h3>
+                        </div>
+                        
+                        <div class="payment-details">
+                            <div class="payment-info">
+                                <div class="payment-item">
+                                    <span class="payment-label">Base Fare</span>
+                                    <span class="payment-value">৳ 800</span>
+                                </div>
+                                
+                                <div class="payment-item">
+                                    <span class="payment-label">Distance Charge</span>
+                                    <span class="payment-value">৳ 350</span>
+                                </div>
+                                
+                                <div class="payment-item">
+                                    <span class="payment-label">Medical Equipment</span>
+                                    <span class="payment-value">৳ 200</span>
+                                </div>
+                                
+                                <div class="payment-item">
+                                    <span class="payment-label">Waiting Time</span>
+                                    <span class="payment-value">৳ 100</span>
+                                </div>
+                                
+                                <div class="payment-divider"></div>
+                                
+                                <div class="payment-item total">
+                                    <span class="payment-label">Total Amount</span>
+                                    <span class="payment-value">৳ 1,450</span>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-method">
+                                <span class="method-label">Payment Method</span>
+                                <div class="method-details">
+                                    <img src="images/credit-card-icon.svg" alt="Card">
+                                    <span>**** **** **** 4567</span>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-actions">
+                                <button class="btn btn-primary">Download Invoice</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trip-review-section">
+                    <div class="review-header">
+                        <h3>Your Review</h3>
+                    </div>
+                    
+                    <div class="review-content">
+                        <div class="review-rating">
+                            <div class="stars">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <span class="rating-text">4.0 - Good Service</span>
+                        </div>
+                        
+                        <div class="review-comment">
+                            <p>The driver was professional and arrived on time. The ambulance was clean and well-equipped. The only issue was that the ride was a bit bumpy at times.</p>
+                        </div>
+                        
+                        <div class="review-date">
+                            <span>Reviewed on May 15, 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('active');
+                });
+            }
+            
+            // User dropdown toggle
+            const userDropdownToggle = document.querySelector('.user-dropdown-toggle');
+            const userDropdownMenu = document.querySelector('.user-dropdown-menu');
+            
+            if (userDropdownToggle && userDropdownMenu) {
+                userDropdownToggle.addEventListener('click', function() {
+                    userDropdownMenu.classList.toggle('active');
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('.user-dropdown')) {
+                        userDropdownMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

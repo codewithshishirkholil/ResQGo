@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Trips - ResQGo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header dashboard-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="user-dashboard.html" class="logo">
+                    <img src="images/ambulance-icon.svg" alt="Ambulance Icon" class="logo-icon">
+                    <h1>ResQGo</h1>
+                </a>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="user-dashboard.html">Dashboard</a></li>
+                        <li><a href="trips.html" class="active">My Trips</a></li>
+                        <li><a href="user-messages.html">Messages</a></li>
+                        <li><a href="emergency-contacts.html">Emergency Contacts</a></li>
+                        <li><a href="help.html">Help</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="user-menu">
+                    <a href="#" class="notification-icon">
+                        <img src="images/bell-icon.svg" alt="Notifications">
+                    </a>
+                    <div class="user-dropdown">
+                        <button class="user-dropdown-toggle">
+                            <div class="user-avatar">
+                                <img src="images/user-avatar.svg" alt="User">
+                            </div>
+                        </button>
+                        <div class="user-dropdown-menu">
+                            <a href="profile.html">Profile</a>
+                            <a href="settings.html">Settings</a>
+                            <a href="payment-methods.html">Payment Methods</a>
+                            <a href="login.html">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="mobile-menu-toggle">
+                    <img src="images/menu-icon.svg" alt="Menu">
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <ul class="mobile-nav-list">
+                    <li><a href="user-dashboard.html">Dashboard</a></li>
+                    <li><a href="trips.html">My Trips</a></li>
+                    <li><a href="user-messages.html">Messages</a></li>
+                    <li><a href="emergency-contacts.html">Emergency Contacts</a></li>
+                    <li><a href="help.html">Help</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="dashboard-content">
+        <div class="container">
+            <div class="trips-container">
+                <div class="page-header">
+                    <h2>My Trips</h2>
+                    <div class="trips-filter">
+                        <div class="search-box">
+                            <input type="text" placeholder="Search trips...">
+                            <button class="search-btn">
+                                <img src="images/search-icon.svg" alt="Search">
+                            </button>
+                        </div>
+                        
+                        <div class="filter-dropdown">
+                            <button class="filter-btn">
+                                <img src="images/filter-icon.svg" alt="Filter">
+                                <span>Filter</span>
+                            </button>
+                            <div class="filter-menu">
+                                <div class="filter-group">
+                                    <h4>Trip Status</h4>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        All
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        Completed
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        Cancelled
+                                    </label>
+                                </div>
+                                
+                                <div class="filter-group">
+                                    <h4>Date Range</h4>
+                                    <div class="date-inputs">
+                                        <input type="date" placeholder="From">
+                                        <input type="date" placeholder="To">
+                                    </div>
+                                </div>
+                                
+                                <div class="filter-actions">
+                                    <button class="btn btn-secondary">Reset</button>
+                                    <button class="btn btn-primary">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trips-list">
+                    <a href="trip-details.html" class="trip-card">
+                        <div class="trip-info">
+                            <div class="trip-date">
+                                <img src="images/calendar-icon.svg" alt="Date">
+                                <span>May 15, 2023 • 10:30 AM</span>
+                            </div>
+                            <div class="trip-route">
+                                <div class="route-points">
+                                    <div class="route-point">
+                                        <span class="point-marker pickup"></span>
+                                        <span class="point-address">Banani, Dhaka</span>
+                                    </div>
+                                    <div class="route-point">
+                                        <span class="point-marker dropoff"></span>
+                                        <span class="point-address">United Hospital, Gulshan</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trip-details">
+                                <div class="trip-type">
+                                    <span>Basic Life Support</span>
+                                </div>
+                                <div class="trip-price">
+                                    <span>৳ 1,450</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trip-status">
+                            <span class="status-badge completed">Completed</span>
+                            <img src="images/chevron-right-icon.svg" alt="View" class="view-icon">
+                        </div>
+                    </a>
+                    
+                    <a href="trip-details.html" class="trip-card">
+                        <div class="trip-info">
+                            <div class="trip-date">
+                                <img src="images/calendar-icon.svg" alt="Date">
+                                <span>May 10, 2023 • 2:15 PM</span>
+                            </div>
+                            <div class="trip-route">
+                                <div class="route-points">
+                                    <div class="route-point">
+                                        <span class="point-marker pickup"></span>
+                                        <span class="point-address">Uttara, Dhaka</span>
+                                    </div>
+                                    <div class="route-point">
+                                        <span class="point-marker dropoff"></span>
+                                        <span class="point-address">Square Hospital, Panthapath</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trip-details">
+                                <div class="trip-type">
+                                    <span>Advanced Life Support</span>
+                                </div>
+                                <div class="trip-price">
+                                    <span>৳ 2,200</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trip-status">
+                            <span class="status-badge completed">Completed</span>
+                            <img src="images/chevron-right-icon.svg" alt="View" class="view-icon">
+                        </div>
+                    </a>
+                    
+                    <a href="trip-details.html" class="trip-card">
+                        <div class="trip-info">
+                            <div class="trip-date">
+                                <img src="images/calendar-icon.svg" alt="Date">
+                                <span>May 5, 2023 • 9:00 AM</span>
+                            </div>
+                            <div class="trip-route">
+                                <div class="route-points">
+                                    <div class="route-point">
+                                        <span class="point-marker pickup"></span>
+                                        <span class="point-address">Dhanmondi, Dhaka</span>
+                                    </div>
+                                    <div class="route-point">
+                                        <span class="point-marker dropoff"></span>
+                                        <span class="point-address">Labaid Hospital, Dhanmondi</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trip-details">
+                                <div class="trip-type">
+                                    <span>Basic Life Support</span>
+                                </div>
+                                <div class="trip-price">
+                                    <span>৳ 800</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trip-status">
+                            <span class="status-badge cancelled">Cancelled</span>
+                            <img src="images/chevron-right-icon.svg" alt="View" class="view-icon">
+                        </div>
+                    </a>
+                    
+                    <a href="trip-details.html" class="trip-card">
+                        <div class="trip-info">
+                            <div class="trip-date">
+                                <img src="images/calendar-icon.svg" alt="Date">
+                                <span>April 28, 2023 • 4:45 PM</span>
+                            </div>
+                            <div class="trip-route">
+                                <div class="route-points">
+                                    <div class="route-point">
+                                        <span class="point-marker pickup"></span>
+                                        <span class="point-address">Mirpur, Dhaka</span>
+                                    </div>
+                                    <div class="route-point">
+                                        <span class="point-marker dropoff"></span>
+                                        <span class="point-address">Dhaka Medical College Hospital</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trip-details">
+                                <div class="trip-type">
+                                    <span>Advanced Life Support</span>
+                                </div>
+                                <div class="trip-price">
+                                    <span>৳ 1,950</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trip-status">
+                            <span class="status-badge completed">Completed</span>
+                            <img src="images/chevron-right-icon.svg" alt="View" class="view-icon">
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="pagination">
+                    <button class="pagination-btn prev disabled">
+                        <img src="images/chevron-left-icon.svg" alt="Previous">
+                    </button>
+                    <div class="pagination-pages">
+                        <button class="pagination-page active">1</button>
+                        <button class="pagination-page">2</button>
+                        <button class="pagination-page">3</button>
+                        <span class="pagination-ellipsis">...</span>
+                        <button class="pagination-page">10</button>
+                    </div>
+                    <button class="pagination-btn next">
+                        <img src="images/chevron-right-icon.svg" alt="Next">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('active');
+                });
+            }
+            
+            // User dropdown toggle
+            const userDropdownToggle = document.querySelector('.user-dropdown-toggle');
+            const userDropdownMenu = document.querySelector('.user-dropdown-menu');
+            
+            if (userDropdownToggle && userDropdownMenu) {
+                userDropdownToggle.addEventListener('click', function() {
+                    userDropdownMenu.classList.toggle('active');
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('.user-dropdown')) {
+                        userDropdownMenu.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Filter dropdown toggle
+            const filterBtn = document.querySelector('.filter-btn');
+            const filterMenu = document.querySelector('.filter-menu');
+            
+            if (filterBtn && filterMenu) {
+                filterBtn.addEventListener('click', function() {
+                    filterMenu.classList.toggle('active');
+                });
+                
+                // Close filter menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('.filter-dropdown')) {
+                        filterMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
